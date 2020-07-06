@@ -23,7 +23,7 @@ div.insertAdjacentElement('beforebegin', unorderedList);
 // add a class of cute
 // add an alt of Cute Puppy
 
-const image = `<img class = 'cute' src = 'https://picsum.photos/250' alt = 'Cute Puppy'/>`;
+const image = `<img class = 'cute' width = "250" src = 'https://picsum.photos/250' alt = 'Cute Puppy'/>`;
 console.log(image)
 
 // Append that image to the wrapper
