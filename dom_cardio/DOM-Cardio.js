@@ -24,7 +24,6 @@ div.insertAdjacentElement('beforebegin', unorderedList);
 // add an alt of Cute Puppy
 
 const image = `<img class = 'cute' width = "250" src = 'https://picsum.photos/250' alt = 'Cute Puppy'/>`;
-console.log(image)
 
 // Append that image to the wrapper
 div.innerHTML = image;
@@ -39,7 +38,6 @@ secondParagraph.textContent = 'Sections 1.10.32 and 1.10.33 from "de Finibus Bon
 
 stringDiv.appendChild(firstParagraph);
 stringDiv.appendChild(secondParagraph);
-console.log(stringDiv);
 
 // put this div before the unordered list from above
 unorderedList.insertAdjacentElement('beforebegin', stringDiv);
