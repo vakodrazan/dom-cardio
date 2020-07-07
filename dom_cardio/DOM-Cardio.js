@@ -49,12 +49,26 @@ firstParagraph.remove();
 
 // create a function called generatePlayerCard that takes in three arguments: name, age, and height
 
-const generatePlayerCard = `
-<div class="playerCard">
-    <h2>NAME — AGE</h2>
-    <p>They are HEIGHT and AGE years old. In Dog years this person would be AGEINDOGYEARS. That would be a tall dog!</p>
-</div>
-`;
+
+const generatePlayerCard = (name, age, height) => {
+    name = 'Boby';
+    age = 7;
+    height = "5m";
+    const generateDiv = document.createElement('div');
+    generateDiv.innerHTML = `
+    <div class="playerCard">
+      <h2>${name} — ${age}</h2>
+      <p>They are ${height} and ${age} years old. In Dog years this person would be ${age * 7}. That would be a tall dog!</p>
+    </div>
+  `;
+
+  return generateDiv;
+};
+
+div.appendChild(generatePlayerCard(name));
+
+
+
 // have that function return html that looks like this:
 // <div class="playerCard">
 //   <h2>NAME — AGE</h2>
@@ -87,3 +101,6 @@ div.insertAdjacentElement("beforebegin", divCard);
 // select all the buttons!
 // make out delete function
 // loop over them and attach a listener
+
+
+
