@@ -69,10 +69,10 @@ divCard.classList.add('cards');
 
 // Have that function make 4 cards
 const card = `
-<span>First card</span>
-<span>Second card</span>
-<span>Third card</span>
-<span>Fourth card</span>
+<button>First card</button>
+<button>Second card</button>
+<button>Third card</button>
+<button>Fourth card</button>
 `;
 
 // append those cards to the div
@@ -82,7 +82,6 @@ divCard.innerHTML = card;
 div.insertAdjacentElement("beforebegin", divCard);
 
 // Bonus, put a delete Button on each card so when you click it, the whole card is removed
-
 
 
 // select all the buttons!
