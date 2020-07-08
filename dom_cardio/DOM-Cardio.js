@@ -65,9 +65,9 @@ const generatePlayerCard = (name, age, height) => {
     <div class="playerCard">
       <h2>${name} — ${age}</h2>
       <p>They are ${height} and ${age} years old. In Dog years this person would be ${age * 7}. That would be a tall dog!</p>
+      <button>Delete</button>
     </div>
   `;
-
 };
 
 // make a new div with a class of cards
@@ -78,7 +78,7 @@ cardDiv.classList.add('cards');
 const fistCard = generatePlayerCard('Booby', 3, "60 cm");
 const secondCard = generatePlayerCard('Skiny', 2, "50 cm");
 const thirdCard = generatePlayerCard('Booly', 3, "60 cm");
-const fourthCard = generatePlayerCard('Milou', 3, "40 cm");
+const fourthCard = generatePlayerCard('Milou', 1, "40 cm");
 
 // append those cards to the div
 cardDiv.insertAdjacentHTML('afterbegin', fistCard + secondCard + thirdCard + fourthCard);
@@ -88,10 +88,15 @@ div.insertAdjacentElement("beforebegin", cardDiv);
 
 // Bonus, put a delete Button on each card so when you click it, the whole card is removed
 
-
 // select all the buttons!
+const deleteButtons = document.querySelectorAll('button');
+
 // make out delete function
+const deleteFunction = ($event) => {
+  $event.currentTarget.parentElement.remove();
+}
 // loop over them and attach a listener
 
-
-
+deleteButtons.forEach((button) => {
+  button.addEventListener('click', deleteFunction);
+})
